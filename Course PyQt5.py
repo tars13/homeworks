@@ -35,7 +35,7 @@ class Course(QtWidgets.QWidget):
         self.city = QtWidgets.QLineEdit()
 
         self.send = QtWidgets.QPushButton("Send")
-        self.cancel = QtWidgets.QPushButton("Cancel")
+        self.clear = QtWidgets.QPushButton("Clear")
 
         h_box = QtWidgets.QHBoxLayout()
         v_box = QtWidgets.QVBoxLayout()
@@ -54,7 +54,7 @@ class Course(QtWidgets.QWidget):
         v_box.addWidget(self.city)
         v_box.addStretch()
         v_box.addWidget(self.send)
-        v_box.addWidget(self.cancel)
+        v_box.addWidget(self.clear)
         v_box.addStretch()
 
         h_box.addStretch()
@@ -64,7 +64,7 @@ class Course(QtWidgets.QWidget):
         self.setGeometry(450,150,500,500)
         self.setWindowTitle("Application Form")
         self.send.clicked.connect(self.info_record)
-        self.cancel.clicked.connect(self.cancel_space)
+        self.clear.clicked.connect(self.cancel_space)
         self.show()
 
     def cancel_space(self):
